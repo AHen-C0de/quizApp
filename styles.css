@@ -39,6 +39,7 @@ body {
   padding: 10px;
 }
 
+/* nav-bar start */
 .nav--wrapper {
   position: sticky;
 }
@@ -67,11 +68,19 @@ body {
 .nav--list a {
   height: 2.5rem;
 }
+/* nav-bar end */
 
+.card {
+  background-color: rgb(170, 223, 193);
+  width: 90%;
+  border-radius: 10px;
+}
+
+/* useful stuff */
 .grow {
   transition: all 0.2s ease-in-out;
 }
 
 .grow:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
