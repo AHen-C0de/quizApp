@@ -54,6 +54,16 @@ body {
   background-color: coral;
 }
 
-nav img {
-  height: 2.2rem;
+.nav--list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.nav--list img {
+  height: 100%;
+}
+
+.nav--list a {
+  height: 2.5rem;
 }
