@@ -36,3 +36,8 @@ body {
   margin: 0;
   padding: 10px;
 }
+
+.nav--wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
