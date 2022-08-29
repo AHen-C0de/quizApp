@@ -70,11 +70,49 @@ body {
 }
 /* nav-bar end */
 
-.card {
-  background-color: rgb(170, 223, 193);
-  width: 90%;
-  border-radius: 10px;
+/* cards start */
+.card--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
 }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(170, 223, 193);
+  margin-top: 20px;
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.card * {
+  text-align: center;
+}
+
+.question {
+  font-size: 20px;
+}
+
+.tags--wrapper {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.tags--wrapper p {
+  background-color: aliceblue;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* cards end */
 
 /* useful stuff */
 .grow {
