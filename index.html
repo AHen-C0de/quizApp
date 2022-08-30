@@ -16,16 +16,24 @@
       <!-- quiz cards section -->
       <section>
         <!-- list of cards -->
-        <ul class="card--wrapper">
+        <ul>
           <li class="card">
-            <p class="question">What property flips the axes in a flexbox?</p>
-            <button class="answer-button">Show Answer</button>
-            <!-- list of tags -->
-            <ul class="tags--wrapper">
-              <p>#html</p>
-              <p>#flexbox</p>
-              <p>#css</p>
-            </ul>
+            <input
+              type="image"
+              alt="bookmark-icon"
+              src="./assets/bookmark_outline.svg"
+              class="card__bookmark-icon"
+            />
+            <div class="card__content">
+              <p class="question">What property flips the axes in a flexbox?</p>
+              <button class="answer-button">Show Answer</button>
+              <!-- list of tags -->
+              <ul class="tags--wrapper">
+                <p>#html</p>
+                <p>#flexbox</p>
+                <p>#css</p>
+              </ul>
+            </div>
           </li>
           <li class="card">
             <p class="question">Lorem ipsum dolor sit...</p>
@@ -58,7 +66,7 @@
         <ul class="nav--list">
           <li>
             <a href="./index.html" aria-label="go to home page" class="grow">
-              <img src="./images/home.png" />
+              <img src="./assets/home.png" />
             </a>
           </li>
           <li>
@@ -67,7 +75,7 @@
               aria-label="go to bookmarks page"
               class="grow"
             >
-              <img src="./images/bookmarks.png" />
+              <img src="./assets/bookmarks.png" />
             </a>
           </li>
           <li>
@@ -76,7 +84,7 @@
               aria-label="go to profile page"
               class="grow"
             >
-              <img src="./images/profile.png" />
+              <img src="./assets/profile.png" />
             </a>
           </li>
         </ul>
