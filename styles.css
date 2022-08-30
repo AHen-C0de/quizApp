@@ -28,17 +28,26 @@
 }
 
 body {
-  /* min-height: 100vh; */
+  min-height: 100vh;
   font-family: Silkscreen;
+  background-color: aliceblue;
+}
+
+main {
+  padding: 50px;
 }
 
 .myHeader {
+  position: sticky;
+  top: 0;
   text-align: center;
-  background-color: coral;
+  background-color: rgb(94, 76, 69);
   margin: 0;
-  padding: 10px;
+  padding: 15px;
+  color: aliceblue;
 }
 
+/* nav-bar start */
 .nav--wrapper {
   position: sticky;
 }
@@ -51,7 +60,7 @@ body {
   width: 100%;
   list-style: none;
   padding: 10px 0 10px 0;
-  background-color: coral;
+  background-color: rgb(94, 76, 69);
 }
 
 .nav--list li {
@@ -62,16 +71,78 @@ body {
 
 .nav--list img {
   height: 100%;
+  filter: invert(100%);
 }
 
 .nav--list a {
   height: 2.5rem;
 }
+/* nav-bar end */
 
+/* cards start */
+.card--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(170, 223, 193);
+  margin-top: 20px;
+  width: 370px;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 10px 10px 7px rgba(92, 119, 104, 0.634);
+}
+
+.card * {
+  text-align: center;
+}
+
+.question {
+  font-size: 22px;
+  margin-top: 40px;
+}
+
+.answer-button {
+  padding: 5px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.tags--wrapper {
+  align-self: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.tags--wrapper p {
+  background-color: aliceblue;
+  border-radius: 5px;
+  padding: 3px;
+  font-size: 15px;
+}
+
+.answer {
+  background-color: aliceblue;
+  padding: 50px;
+  border-radius: 10px;
+}
+/* cards end */
+
+/* useful stuff */
 .grow {
   transition: all 0.2s ease-in-out;
 }
 
 .grow:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
