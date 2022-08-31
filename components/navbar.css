@@ -1,6 +1,7 @@
 .navbar {
-  position: fixed;
+  position: sticky;
   bottom: 0;
+  z-index: 10;
   width: 100%;
 }
 
@@ -9,7 +10,7 @@
   justify-content: space-evenly;
   list-style: none;
   padding: 10px 0 10px 0;
-  background-color: var(--color-stickybar);
+  background-color: var(--color-sticky);
 }
 
 .navbar__list li {
@@ -28,5 +29,5 @@
 }
 
 .navbar__list .current {
-  border-bottom: solid 2px var(--color-card);
+  border-bottom: solid 3px var(--color-card);
 }

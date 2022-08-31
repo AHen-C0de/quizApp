@@ -5,83 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Web-Quiz</title>
+    <title>Web-Quiz/Bookmarks</title>
   </head>
   <body>
     <header>
-      <h1 class="myHeader">Web-Quiz -bookmarks</h1>
+      <h1 class="header">Web-Quiz</h1>
+      <h2>Bookmarks</h2>
     </header>
 
     <main>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
-      <p>example text</p>
+      <!-- list of cards -->
+      <ul>
+        <li class="card">
+          <input
+            type="image"
+            alt="bookmark-icon"
+            src="./assets/bookmark_filled.svg"
+            class="card__bookmark-icon"
+          />
+          <p class="card__question">
+            What property flips the axes in a flexbox?
+          </p>
+          <button class="card__answer-button">Show Answer</button>
+          <p class="card__answer-text hidden">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+            vitae ipsum odit qui quaerat perferendis, illo amet explicabo minima
+            animi quo. Ab magnam eos accusamus deleniti cupiditate autem aliquid
+            praesentium?
+          </p>
+          <!-- list of tags -->
+          <ul class="card__tags-list">
+            <li>#html</li>
+            <li>#flexbox</li>
+            <li>#css</li>
+          </ul>
+        </li>
+      </ul>
     </main>
 
-    <footer class="nav--wrapper">
+    <footer class="navbar">
       <nav>
-        <ul class="nav--list">
+        <ul class="navbar__list">
           <li>
-            <a href="./index.html">
-              <img src="./assets/home.png" aria-label="go to home page" />
-            </a>
-          </li>
-          <li>
-            <a href="./bookmarks.html">
+            <a href="./index.html" aria-label="go to home page" class="grow">
               <img
-                src="./assets/bookmarks.png"
-                aria-label="go to bookmarks page"
+                src="./assets/home.png"
+                alt="home-icon"
+                class="navbar__icon"
               />
             </a>
           </li>
           <li>
-            <a href="./profile.html">
-              <img src="./assets/profile.png" aria-label="go to profile page" />
+            <a
+              href="./bookmarks.html"
+              aria-label="go to bookmarks page"
+              class="grow current"
+            >
+              <img
+                src="./assets/bookmarks.png"
+                alt="bookmarks-icon"
+                class="navbar__icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="./profile.html"
+              aria-label="go to profile page"
+              class="grow"
+            >
+              <img
+                src="./assets/profile.png"
+                alt="profile-icon"
+                class="navbar__icon"
+              />
             </a>
           </li>
         </ul>
