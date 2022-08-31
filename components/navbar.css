@@ -1,11 +1,4 @@
 .navbar {
-  position: sticky;
-  bottom: 0;
-  z-index: 10;
-  width: 100%;
-}
-
-.navbar__list {
   display: flex;
   justify-content: space-evenly;
   list-style: none;
@@ -13,7 +6,7 @@
   background-color: var(--color-sticky);
 }
 
-.navbar__list li {
+.navbar li {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -24,10 +17,10 @@
   filter: invert(100%);
 }
 
-.navbar__list a {
+.navbar a {
   height: 2.5rem;
 }
 
-.navbar__list .current {
+.navbar .current {
   border-bottom: solid 3px var(--color-card);
 }

@@ -63,25 +63,42 @@
       <p>example text</p>
     </main>
 
-    <footer class="nav--wrapper">
+    <footer>
       <nav>
-        <ul class="nav--list">
+        <ul class="navbar">
           <li>
-            <a href="./index.html">
-              <img src="./assets/home.png" aria-label="go to home page" />
-            </a>
-          </li>
-          <li>
-            <a href="./bookmarks.html">
+            <a href="./index.html" aria-label="go to home page" class="grow">
               <img
-                src="./assets/bookmarks.png"
-                aria-label="go to bookmarks page"
+                src="./assets/home.png"
+                alt="home-icon"
+                class="navbar__icon"
               />
             </a>
           </li>
           <li>
-            <a href="./profile.html">
-              <img src="./assets/profile.png" aria-label="go to profile page" />
+            <a
+              href="./bookmarks.html"
+              aria-label="go to bookmarks page"
+              class="grow"
+            >
+              <img
+                src="./assets/bookmarks.png"
+                alt="bookmarks-icon"
+                class="navbar__icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="./profile.html"
+              aria-label="go to profile page"
+              class="grow current"
+            >
+              <img
+                src="./assets/profile.png"
+                alt="profile-icon"
+                class="navbar__icon"
+              />
             </a>
           </li>
         </ul>
