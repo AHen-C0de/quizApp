@@ -1,3 +1,7 @@
+@import url(./components/header.css);
+@import url(./components/card.css);
+@import url(./components/navbar.css);
+
 /* silkscreen-regular - latin */
 @font-face {
   font-family: "Silkscreen";
@@ -21,6 +25,13 @@
       format("svg"); /* Legacy iOS */
 }
 
+:root {
+  --color-background: aliceblue;
+  --color-card: rgb(170, 223, 193);
+  --color-card-shaddow: rgba(92, 119, 104, 0.634);
+  --color-stickybar: rgb(94, 76, 69);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -30,124 +41,21 @@
 body {
   min-height: 100vh;
   font-family: Silkscreen;
-  background-color: aliceblue;
+  background-color: var(--color-background);
 }
 
 main {
-  padding: 70px 0;
+  padding: 70px 30px;
 }
 
-.header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  text-align: center;
-  background-color: rgb(94, 76, 69);
-  margin: 0;
-  padding: 10px;
-  color: aliceblue;
-  z-index: 10;
-  font-size: 35px;
-}
-
-/* nav-bar start */
-.navbar {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-.navbar__list {
-  display: flex;
-  justify-content: space-evenly;
-  list-style: none;
-  padding: 10px 0 10px 0;
-  background-color: rgb(94, 76, 69);
-}
-
-.navbar__list li {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.navbar__list img {
-  height: 100%;
-  filter: invert(100%);
-}
-
-.navbar__list a {
-  height: 2.5rem;
-}
-/* nav-bar end */
-
-/* cards start */
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  min-height: 300px;
-  background-color: rgb(170, 223, 193);
-  margin: 40px auto;
-  width: 370px;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 10px 10px 7px rgba(92, 119, 104, 0.634);
-  list-style: none;
-  text-align: center;
-}
-
-.card__bookmark-icon {
-  position: absolute;
-  top: -15px;
-  left: 300px;
-  width: 12%;
-}
-
-.card__question {
-  font-size: 20px;
-  margin-top: 35px;
-}
-
-.card__answer-button {
-  padding: 5px;
-  background-color: aliceblue;
-  border-radius: 10px;
-  font-size: 20px;
-}
-
-.card__answer-text {
-  font-size: 14px;
-  background-color: aliceblue;
-  padding: 50px;
-  border-radius: 10px;
-}
-
-.card__tags-list {
-  align-self: flex-start;
-  display: flex;
-  justify-content: flex-start;
-  gap: 15px;
-}
-
-.card__tags-list li {
-  background-color: aliceblue;
-  border-radius: 5px;
-  padding: 3px;
-  font-size: 17px;
-  list-style: none;
-  font-family: "Lucida Console", "Courier New", monospace;
-}
-/* cards end */
-
-/* useful stuff */
 .grow {
   transition: all 0.2s ease-in-out;
 }
 
 .grow:hover {
   transform: scale(1.2);
+}
+
+.hidden {
+  display: none;
 }

@@ -1,0 +1,60 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  min-height: 300px;
+  max-width: 450px;
+  background-color: var(--color-card);
+  margin: 40px auto;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 10px 10px 7px var(--color-card-shaddow);
+  list-style: none;
+  text-align: center;
+}
+
+.card__bookmark-icon {
+  position: absolute;
+  top: -15px;
+  right: 25px;
+  width: 40px;
+}
+
+.card__question {
+  font-size: 20px;
+  margin-top: 35px;
+}
+
+.card__answer-button {
+  padding: 5px;
+  background-color: var(--color-background);
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.card__answer-text {
+  font-size: 14px;
+  background-color: var(--color-background);
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.card__tags-list {
+  flex-wrap: wrap;
+  align-self: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.card__tags-list li {
+  background-color: var(--color-background);
+  border-radius: 5px;
+  padding: 3px;
+  font-size: 17px;
+  list-style: none;
+  font-family: "Lucida Console", "Courier New", monospace;
+}

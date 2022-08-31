@@ -1,0 +1,32 @@
+.navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar__list {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 10px 0 10px 0;
+  background-color: var(--color-stickybar);
+}
+
+.navbar__list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.navbar__icon {
+  height: 100%;
+  filter: invert(100%);
+}
+
+.navbar__list a {
+  height: 2.5rem;
+}
+
+.navbar__list .current {
+  border-bottom: solid 2px var(--color-card);
+}
