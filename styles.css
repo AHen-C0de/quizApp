@@ -1,6 +1,7 @@
 @import url(./components/header.css);
 @import url(./components/card.css);
 @import url(./components/navbar.css);
+@import url(./components/profile-page.css);
 
 /* silkscreen-regular - latin */
 @font-face {
@@ -62,4 +63,8 @@ main {
 
 .hidden {
   display: none;
+}
+
+.red {
+  background-color: red;
 }
