@@ -15,7 +15,7 @@
     </header>
 
     <main class="profile">
-      <div class="content-wrapper--profile">
+      <div class="content-wrapper">
         <!-- Info -->
         <section class="profile__info">
           <img
@@ -24,13 +24,19 @@
             class="profile__image"
           />
           <article>
-            <h4 class="profile__header">Name XY</h4>
+            <h3 class="profile__header h3__fontsize">Name XY</h3>
             <article class="profile__details">
               <p class="details__attr">Account created on:</p>
-              <p class="details__attr">Time spent:</p>
-              <p class="details__attr">...</p>
               <p class="details__value">01.01.2000</p>
+
+              <div class="border--dark" js-data="border-dark"></div>
+
+              <p class="details__attr">Time spent:</p>
               <p class="details__value">2 hrs 53 min</p>
+
+              <div class="border--dark" js-data="border-dark"></div>
+
+              <p class="details__attr">...</p>
               <p class="details__value">...</p>
             </article>
           </article>
@@ -38,7 +44,7 @@
 
         <!-- Settings -->
         <section>
-          <h3 class="settings__header">Settings</h3>
+          <h3 class="settings__header h3__fontsize">Settings</h3>
           <article class="settings__container" js-data="settingsBox">
             <p class="settings__attr">Dark Mode</p>
             <label class="settings__operator switch">
@@ -46,11 +52,11 @@
               <span class="slider round"></span>
             </label>
 
-            <div class="border"></div>
+            <div class="border--bright"></div>
 
             <button class="settings__attr">Change Name</button>
 
-            <div class="border"></div>
+            <div class="border--bright"></div>
 
             <button class="settings__attr">Reset Bookmarks</button>
           </article>

@@ -1,10 +1,7 @@
-@import url(./slider.css);
-
 .profile__info {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 30px;
-  padding: 20px;
 }
 
 .profile__image {
@@ -21,8 +18,7 @@
 }
 
 .profile__header {
-  margin-bottom: 20px;
-  font-size: 1.7rem;
+  margin-bottom: 2rem;
 }
 
 .profile__details {
@@ -30,6 +26,14 @@
   grid-template-columns: 1fr 1fr;
   grid-auto-flow: column;
   row-gap: 1.2rem;
+  column-gap: 0.7rem;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .profile__details {
+    font-size: 1.1rem;
+  }
 }
 
 .details__attr {
@@ -42,14 +46,13 @@
 }
 
 .settings__header {
-  margin-bottom: 0.3rem;
-  font-size: 25px;
-  padding-left: 25px;
+  margin-bottom: 0.6rem;
+  padding-left: 1.5rem;
 }
 
 .settings__container {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 40% 60%;
   grid-template-rows: repeat(3, auto);
   grid-auto-flow: column;
   gap: 15px;
@@ -58,25 +61,25 @@
   border-radius: 1rem;
 }
 
-.border {
-  grid-column: 1 / -1;
-  border-top: solid 1px var(--color-background);
-}
-
 .settings__attr {
   grid-column: 1;
-  justify-self: center;
   align-self: center;
   width: 100%;
   text-align: center;
-  font-size: 1.1rem;
   padding: 3px;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+  .settings__attr {
+    font-size: 1.3rem;
+  }
 }
 
 .settings__operator {
   grid-column: 2;
   justify-self: end;
-  right: 40px;
+  right: 1rem;
 }
 
 .settings__container button {
