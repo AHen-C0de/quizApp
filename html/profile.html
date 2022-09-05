@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../profile_fun.js" defer></script>
+    <title>Web-Quiz/Profile</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__main">Web-Quiz</h1>
+      <h2 class="header__sub">Profile</h2>
+    </header>
+
+    <main class="profile">
+      <div class="content-wrapper--profile">
+        <!-- Info -->
+        <section class="profile__info">
+          <img
+            src="../assets/profile_picture.jpg"
+            alt="profile picture"
+            class="profile__image"
+          />
+          <article>
+            <h4 class="profile__header">Name XY</h4>
+            <article class="profile__details">
+              <p class="details__attr">Account created on:</p>
+              <p class="details__attr">Time spent:</p>
+              <p class="details__attr">...</p>
+              <p class="details__value">01.01.2000</p>
+              <p class="details__value">2 hrs 53 min</p>
+              <p class="details__value">...</p>
+            </article>
+          </article>
+        </section>
+
+        <!-- Settings -->
+        <section>
+          <h3 class="settings__header">Settings</h3>
+          <article class="settings__container" js-data="settingsBox">
+            <p class="settings__attr">Dark Mode</p>
+            <label class="settings__operator switch">
+              <input type="checkbox" js-data="dark-mode" />
+              <span class="slider round"></span>
+            </label>
+
+            <div class="border"></div>
+
+            <button class="settings__attr">Change Name</button>
+
+            <div class="border"></div>
+
+            <button class="settings__attr">Reset Bookmarks</button>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <nav>
+        <ul class="navbar">
+          <li>
+            <a href="./index.html" aria-label="go to home page" class="grow">
+              <img
+                src="../assets/home.png"
+                alt="home-icon"
+                class="navbar__icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="./bookmarks.html"
+              aria-label="go to bookmarks page"
+              class="grow"
+            >
+              <img
+                src="../assets/bookmarks.png"
+                alt="bookmarks-icon"
+                class="navbar__icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="./profile.html"
+              aria-label="go to profile page"
+              class="grow current"
+            >
+              <img
+                src="../assets/profile.png"
+                alt="profile-icon"
+                class="navbar__icon"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>

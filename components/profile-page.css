@@ -1,15 +1,5 @@
 @import url(./slider.css);
 
-.profile {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding: 10px;
-  padding-top: 3rem;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
 .profile__info {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -19,7 +9,15 @@
 
 .profile__image {
   width: 100%;
+  min-width: 150px;
   border-radius: 20%;
+}
+
+@media (min-width: 1024px) {
+  .profile__image {
+    width: 300px;
+    border-radius: 20%;
+  }
 }
 
 .profile__header {
@@ -30,10 +28,8 @@
 .profile__details {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(3, 1fr);
   grid-auto-flow: column;
-  row-gap: 0.1rem;
-  line-height: 2rem;
+  row-gap: 1.2rem;
 }
 
 .details__attr {
