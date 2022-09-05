@@ -1,0 +1,2 @@
+- add scroll bar to main page
+- add sorting questions by tags

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="profile_fun.js" defer></script>
     <title>Web-Quiz/Profile</title>
   </head>
   <body>
@@ -14,6 +15,7 @@
     </header>
 
     <main class="profile">
+      <!-- Info -->
       <section class="profile__info">
         <img
           src="./assets/profile_picture.jpg"
@@ -33,12 +35,13 @@
         </article>
       </section>
 
+      <!-- Settings -->
       <section>
         <h3 class="settings__header">Settings</h3>
-        <article class="settings__container">
+        <article class="settings__container" js-data="settingsBox">
           <p class="settings__attr">Dark Mode</p>
           <label class="settings__operator switch">
-            <input type="checkbox" />
+            <input type="checkbox" js-data="dark-mode" />
             <span class="slider round"></span>
           </label>
 

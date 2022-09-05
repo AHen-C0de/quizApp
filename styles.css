@@ -28,7 +28,9 @@
 
 :root {
   --color-background: aliceblue;
+  --color-background-darkMode: rgb(34, 34, 41);
   --color-card: rgb(170, 223, 193);
+  --color-card-darkMode: rgba(170, 223, 193, 0.457);
   --color-card-shaddow: rgba(92, 119, 104, 0.634);
   --color-sticky: rgb(94, 76, 69);
   --color-sticky-sub: rgb(207, 86, 86);
@@ -65,6 +67,12 @@ main {
   display: none;
 }
 
-.red {
-  background-color: red;
+.darkModeBody {
+  background-color: var(--color-background-darkMode);
+  color: var(--color-background);
+}
+
+.darkModeCard {
+  background-color: var(--color-card-darkMode);
+  color: var(--color-background);
 }
