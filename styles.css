@@ -99,6 +99,7 @@ main {
   }
 }
 
+/* Dark Mode */
 .darkMode__body {
   background-color: var(--color-background-darkMode);
   color: var(--color-background);
@@ -107,9 +108,4 @@ main {
 .darkMode__card {
   background-color: var(--color-card-darkMode);
   color: var(--color-background);
-}
-
-.darkMode__border-dark {
-  grid-column: 1 / -1;
-  border-top: solid 1px var(--color-background);
 }
