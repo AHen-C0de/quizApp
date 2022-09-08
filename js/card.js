@@ -1,21 +1,8 @@
 console.log("card.js loaded!");
 
-const cardList = document.querySelector('[js-data="card-list"]');
-
-const question = "Lorem ipsum dolor sit, amet consectetur adipisicing elit?";
-const answer =
-  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam perferendis possimus, dignissimos voluptates cupiditate doloremque voluptatum consectetur velit magnam eaque eius amet molestias, ea eveniet laborum veritatis perspiciatis quod nisi.";
-const tagsList = ["html", "CSS", "flexbox"];
-
-createCard(question, answer, tagsList);
-createCard(question, answer, tagsList);
-createCard(question, answer, tagsList);
-createCard(question, answer, tagsList);
-
-/* --- functions --- */
-function createCard(question, answer, tagsArray) {
-  const container = document.createElement("li");
-  container.classList.add("card");
+export default function createCard(question, answer, tagsArray, container) {
+  const card_container = document.createElement("li");
+  card_container.classList.add("card");
 
   const bookmark = document.createElement("input");
   bookmark.src = "../assets/bookmark_outline.svg";
@@ -48,8 +35,14 @@ function createCard(question, answer, tagsArray) {
     tags_list.append(tag);
   }
 
-  container.append(bookmark, questionBox, answerButton, answerBox, tags_list);
-  cardList.append(container);
+  card_container.append(
+    bookmark,
+    questionBox,
+    answerButton,
+    answerBox,
+    tags_list
+  );
+  container.append(card_container);
 }
 
 function bookmark_fun(bookmark) {

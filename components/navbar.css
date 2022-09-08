@@ -14,6 +14,7 @@
 
 .navbar__icon {
   height: 100%;
+  /* fill: red; */
   filter: invert(100%);
 }
 

@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../components/addCards-form.css" />
+    <script src="../js/addCard_form.js" type="module" defer></script>
     <script src="../js/card.js" type="module" defer></script>
-    <script src="../js/darkMode.js" type="module" defer></script>
-    <script src="../js/index.js" type="module" defer></script>
-    <title>Web-Quiz</title>
+    <script></script>
+    <title>Web-Quizz/Add Cards</title>
   </head>
   <body>
     <header class="header">
@@ -16,19 +17,53 @@
     </header>
 
     <main>
-      <!-- list of cards -->
-      <ul class="content-wrapper" js-data="card-list"></ul>
+      <div class="content-wrapper">
+        <h1 class="form__header">Add a new Card</h1>
+        <form class="form__wrapper" js-data="form">
+          <label for="question" class="form__input-label">Your Question:</label>
+          <textarea
+            id="question"
+            name="question"
+            js-data="question"
+            rows="4"
+            placeholder="Type..."
+            class="form__input-field"
+          ></textarea>
+
+          <label for="answer" class="form__input-label">Your Answer:</label>
+          <textarea
+            id="answer"
+            name="answer"
+            rows="4"
+            placeholder="Type..."
+            class="form__input-field"
+          ></textarea>
+
+          <label for="tags" class="form__input-label">Give Tags:</label>
+          <input
+            type="text"
+            id="tags"
+            name="tags"
+            placeholder="Type..."
+            class="form__input-field"
+          />
+
+          <button type="submit" class="form__submit-button">Add to List</button>
+        </form>
+
+        <span class="form__submit-success" js-data="submit-sucess"
+          >Card was added!</span
+        >
+
+        <div js-data="placeholder" class="content-wrapper"></div>
+      </div>
     </main>
 
     <footer>
       <nav>
         <ul class="navbar">
           <li>
-            <a
-              href="./index.html"
-              aria-label="go to home page"
-              class="grow current"
-            >
+            <a href="./index.html" aria-label="go to home page" class="grow">
               <img
                 src="../assets/home.png"
                 alt="home-icon"
@@ -53,7 +88,7 @@
             <a
               href="./addCards.html"
               aria-label="go to add-cards page"
-              class="grow"
+              class="grow current"
             >
               <img
                 src="../assets/add.svg"
