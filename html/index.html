@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles.css" />
+    <script src="../js/bookmark.js" defer></script>
+    <script src="../js/darkMode.js" defer></script>
+    <script src="../js/card.js" defer></script>
     <title>Web-Quiz</title>
   </head>
   <body>
@@ -14,7 +17,7 @@
 
     <main>
       <!-- list of cards -->
-      <ul class="content-wrapper">
+      <ul class="content-wrapper" js-data="card-list">
         <li class="card">
           <input
             type="image"
@@ -34,12 +37,12 @@
           </p>
           <!-- list of tags -->
           <ul class="card__tags-list">
-            <li>#html</li>
-            <li>#flexbox</li>
-            <li>#css</li>
-            <li>#more</li>
-            <li>#more</li>
-            <li>#more</li>
+            <li class="card__tag">#html</li>
+            <li class="card__tag">#flexbox</li>
+            <li class="card__tag">#css</li>
+            <li class="card__tag">#more</li>
+            <li class="card__tag">#more</li>
+            <li class="card__tag">#more</li>
           </ul>
         </li>
 
@@ -62,9 +65,9 @@
           </p>
           <!-- list of tags -->
           <ul class="card__tags-list">
-            <li>#html</li>
-            <li>#flexbox</li>
-            <li>#css</li>
+            <li class="card__tag">#html</li>
+            <li class="card__tag">#flexbox</li>
+            <li class="card__tag">#css</li>
           </ul>
         </li>
 
@@ -87,9 +90,9 @@
           </p>
           <!-- list of tags -->
           <ul class="card__tags-list">
-            <li>#html</li>
-            <li>#flexbox</li>
-            <li>#css</li>
+            <li class="card__tag">#html</li>
+            <li class="card__tag">#flexbox</li>
+            <li class="card__tag">#css</li>
           </ul>
         </li>
       </ul>

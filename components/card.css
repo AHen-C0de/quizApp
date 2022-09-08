@@ -50,11 +50,30 @@
   gap: 15px;
 }
 
-.card__tags-list li {
+.card__tag {
   background-color: var(--color-background);
   border-radius: 5px;
   padding: 3px;
   font-size: 17px;
   list-style: none;
   font-family: "Lucida Console", "Courier New", monospace;
+}
+
+/* Dark Mode */
+.card--darkMode {
+  background-color: var(--color-card-darkMode);
+  color: var(--color-background);
+  box-shadow: 12px 12px 7px var(--color-card-shaddow-darkMode);
+}
+
+.card__bookmark-icon--darkMode {
+  filter: invert(100%);
+}
+
+.card__answer-text--darkMode {
+  background-color: var(--color-background-darkMode);
+}
+
+.card__tag--darkMode {
+  background: var(--color-background-darkMode);
 }

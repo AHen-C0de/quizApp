@@ -61,6 +61,10 @@
   border-radius: 1rem;
 }
 
+.settings__container--darkMode {
+  background-color: var(--color-card-darkMode);
+}
+
 .settings__attr {
   grid-column: 1;
   align-self: center;
