@@ -76,10 +76,6 @@ main {
   transform: scale(1.2);
 }
 
-.hidden {
-  display: none;
-}
-
 .border--bright {
   grid-column: 1 / -1;
   border-top: solid 1px var(--color-background);
