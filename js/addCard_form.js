@@ -6,6 +6,7 @@ console.log("addCard_form.js loaded!");
 
 const form = document.querySelector('[js-data="form"]');
 const questionInput = document.querySelector('[js-data="question"]');
+const successMsg = document.querySelector('[js-data="submit-sucess"]');
 const placeholder = document.querySelector('[js-data="placeholder"]');
 
 form.addEventListener("submit", (event) => {
@@ -23,6 +24,12 @@ form.addEventListener("submit", (event) => {
 
   form.reset();
   questionInput.focus();
+
+  successMsg.classList.add("form__submit-success--enter");
+  const rollBack = () => {
+    successMsg.classList.remove("form__submit-success--enter");
+  };
+  setTimeout(rollBack, 2000);
 });
 
 /* to do */
