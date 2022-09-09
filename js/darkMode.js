@@ -4,6 +4,7 @@ let darkMode;
 let storage = window.sessionStorage;
 
 const sliderDarkMode = document.querySelector('[js-data="dark-mode"]');
+
 const body = document.querySelector("body");
 const settingsBox = document.querySelector('[js-data="settingsBox"]');
 const borders_dark = document.getElementsByClassName("border--dark");
@@ -11,6 +12,7 @@ const cards = document.getElementsByClassName("card");
 const bookmark_icons = document.getElementsByClassName("card__bookmark-icon");
 const answers = document.getElementsByClassName("card__answer-text");
 const tags = document.getElementsByClassName("card__tag");
+const form2 = document.querySelector('[js-data="form"]');
 // const r = document.querySelector(":root");
 
 /* event listener for darkMode on slider */
@@ -64,7 +66,14 @@ function toggleDarkMode(darkModeOn) {
     }
 
     /* profile page */
-    settingsBox.classList.add("settings__container--darkMode");
+    if (settingsBox !== null) {
+      settingsBox.classList.add("settings__container--darkMode");
+    }
+
+    /* addCard page */
+    if (form2 !== null) {
+      form2.classList.add("form__wrapper--darkMode");
+    }
   } else {
     body.classList.remove("darkMode__body");
     for (let i = 0; i < borders_dark.length; i++) {
@@ -75,6 +84,12 @@ function toggleDarkMode(darkModeOn) {
     // r.style.setProperty("--color-card-shaddow", "rgba(92, 119, 104, 0.634)");
 
     /* profile page */
-    settingsBox.classList.remove("settings__container--darkMode");
+    if (settingsBox !== null) {
+      settingsBox.classList.remove("settings__container--darkMode");
+    }
+    /* addCard page */
+    if (form2 !== null) {
+      form2.classList.remove("form__wrapper--darkMode");
+    }
   }
 }

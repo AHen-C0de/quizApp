@@ -4,26 +4,27 @@
 @import url(./components/profile-page.css);
 @import url(./components/slider.css);
 
-/* silkscreen-regular - latin */
+/* --- fonts --- */
+/* patrick-hand-regular - latin */
 @font-face {
-  font-family: "Silkscreen";
+  font-family: "Patrick Hand";
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/silkscreen-v1-latin/silkscreen-v1-latin-regular.eot"); /* IE9 Compat Modes */
+  src: url("/fonts/patrick-hand-v19-latin/patrick-hand-v19-latin-regular.eot"); /* IE9 Compat Modes */
   src: local(""),
-    url("fonts/silkscreen-v1-latin/silkscreen-v1-latin-regular.eot?#iefix")
+    url("/fonts/patrick-hand-v19-latin/patrick-hand-v19-latin-regular.eot?#iefix")
       format("embedded-opentype"),
     /* IE6-IE8 */
-      url("fonts/silkscreen-v1-latin/silkscreen-v1-latin-regular.woff2")
+      url("/fonts/patrick-hand-v19-latin/patrick-hand-v19-latin-regular.woff2")
       format("woff2"),
     /* Super Modern Browsers */
-      url("fonts/silkscreen-v1-latin/silkscreen-v1-latin-regular.woff")
+      url("/fonts/patrick-hand-v19-latin/patrick-hand-v19-latin-regular.woff")
       format("woff"),
     /* Modern Browsers */
-      url("fonts/silkscreen-v1-latin/silkscreen-v1-latin-regular.ttf")
+      url("/fonts/patrick-hand-v19-latin/patrick-hand-v19-latin-regular.ttf")
       format("truetype"),
     /* Safari, Android, iOS */
-      url("fonts/silkscreen-v1-latin/silkscreen-v1-latin-regular.svg#Silkscreen")
+      url("/fonts/patrick-hand-v19-latin/patrick-hand-v19-latin-regular.svg#PatrickHand")
       format("svg"); /* Legacy iOS */
 }
 
@@ -31,7 +32,6 @@
   --color-background: aliceblue;
   --color-background-darkMode: rgb(34, 34, 41);
   --color-card: rgb(170, 223, 193);
-  --color-card-bright: rgb(231, 248, 239);
   --color-card-darkMode: rgba(170, 223, 193, 0.457);
   --color-card-shaddow: rgba(92, 119, 104, 0.634);
   --color-card-shaddow-darkMode: rgb(14, 18, 16);
@@ -47,7 +47,6 @@
 }
 
 body {
-  font-family: Silkscreen;
   background-color: var(--color-background);
   display: grid;
   grid-template-rows: 100px 1fr 60px;

@@ -3,6 +3,7 @@ import createCard from "./card.js";
 console.log("addCard_form.js loaded!");
 console.log(createCard);
 
+/* --- html elements --- */
 const form = document.querySelector('[js-data="form"]');
 const questionInput = document.querySelector('[js-data="question"]');
 const answerInput = document.querySelector('[js-data="answer"]');
@@ -12,8 +13,13 @@ const successMsg = document.querySelector('[js-data="submit-sucess"]');
 
 const placeholder = document.querySelector('[js-data="placeholder"]');
 
-questionInput.addEventListener("input", change_charCounter_quest);
-answerInput.addEventListener("input", change_charCounter_answer);
+/* --- event listener --- */
+questionInput.addEventListener("input", () => {
+  change_charCounter(questionInput, charsQuest);
+});
+answerInput.addEventListener("input", () => {
+  change_charCounter(answerInput, charsAnswer);
+});
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -32,31 +38,20 @@ form.addEventListener("submit", (event) => {
 
   questionInput.focus();
   successMsg.classList.add("form__submit-success--enter");
-  const rollBack = () => {
+  setTimeout(() => {
     successMsg.classList.remove("form__submit-success--enter");
-  };
-  setTimeout(rollBack, 2000);
+  }, 1500);
 });
 
-function change_charCounter_quest() {
-  const char_number = questionInput.value.length;
-  charsQuest.textContent = `${char_number}/150`;
+/* --- functions --- */
+function change_charCounter(charInput, charOutput) {
+  console.log("shit");
+
+  const char_number = charInput.value.length;
+  charOutput.textContent = `${char_number}/150`;
   if (char_number === 150) {
-    charsQuest.classList.add("form__show-chars--max");
+    charOutput.classList.add("form__show-chars--max");
   } else {
-    charsQuest.classList.remove("form__show-chars--max");
+    charOutput.classList.remove("form__show-chars--max");
   }
 }
-
-function change_charCounter_answer() {
-  const char_number = answerInput.value.length;
-  charsAnswer.textContent = `${char_number}/150`;
-  if (char_number === 150) {
-    charsAnswer.classList.add("form__show-chars--max");
-  } else {
-    charsAnswer.classList.remove("form__show-chars--max");
-  }
-}
-
-/* to do */
-// - add div with animation after submission
