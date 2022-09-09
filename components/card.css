@@ -42,6 +42,12 @@
   padding: 50px;
   width: 95%;
   border-radius: 10px;
+  transform: scale(0);
+  transition: 0.5s ease;
+}
+
+.card__answer-text--enter {
+  transform: scale(1);
 }
 
 .card__tags-list {

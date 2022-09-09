@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../components/addCards-form.css" />
     <script src="../js/addCard_form.js" type="module" defer></script>
     <script src="../js/card.js" type="module" defer></script>
-    <script></script>
     <title>Web-Quizz/Add Cards</title>
   </head>
   <body>
@@ -27,17 +26,22 @@
             js-data="question"
             rows="4"
             placeholder="Type..."
+            maxlength="150"
             class="form__input-field"
           ></textarea>
+          <p class="form__show-chars" js-data="chars-question">0/150</p>
 
           <label for="answer" class="form__input-label">Your Answer:</label>
           <textarea
             id="answer"
             name="answer"
+            js-data="answer"
             rows="4"
             placeholder="Type..."
+            maxlength="150"
             class="form__input-field"
           ></textarea>
+          <p class="form__show-chars" js-data="chars-answer">0/150</p>
 
           <label for="tags" class="form__input-label">Give Tags:</label>
           <input

@@ -57,13 +57,18 @@ function bookmark_fun(bookmark) {
   });
 }
 
-function answerButton_fun(button, answer) {
+function answerButton_fun(button, answerBox) {
   button.addEventListener("click", () => {
-    answer.toggleAttribute("hidden");
-    if (answer.hidden) {
+    answerBox.toggleAttribute("hidden");
+    if (answerBox.hidden) {
       button.textContent = "Show Answer";
+      setTimeout(
+        () => answerBox.classList.remove("card__answer-text--enter"),
+        0 // doesnt work, because field hidden before class is removed
+      );
     } else {
       button.textContent = "Hide Answer";
+      setTimeout(() => answerBox.classList.add("card__answer-text--enter"), 0);
     }
   });
 }
