@@ -1,7 +1,6 @@
 import createCard from "./card.js";
 
 console.log("addCard_form.js loaded!");
-console.log(createCard);
 
 /* --- html elements --- */
 const form = document.querySelector('[js-data="form"]');
