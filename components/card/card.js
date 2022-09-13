@@ -1,9 +1,9 @@
-export default function createCard(question, answer, tagsArray, container) {
-  const card_container = document.createElement("li");
-  card_container.classList.add("card");
+export default function createCard(question, answer, tagsArray) {
+  const card = document.createElement("li");
+  card.classList.add("card");
 
   const bookmark = document.createElement("input");
-  bookmark.src = "../assets/bookmark_outline.svg";
+  bookmark.src = "../../assets/bookmark_outline.svg";
   bookmark.type = "image";
   bookmark.alt = "bookmark-icon";
   bookmark.classList.add("card__bookmark-icon");
@@ -33,14 +33,9 @@ export default function createCard(question, answer, tagsArray, container) {
     tags_list.append(tag);
   }
 
-  card_container.append(
-    bookmark,
-    questionBox,
-    answerButton,
-    answerBox,
-    tags_list
-  );
-  container.append(card_container);
+  card.append(bookmark, questionBox, answerButton, answerBox, tags_list);
+
+  return card;
 }
 
 function bookmark_fun(bookmark) {
@@ -48,9 +43,9 @@ function bookmark_fun(bookmark) {
     const source = bookmark.src;
 
     if (source.endsWith("outline.svg")) {
-      bookmark.src = "../assets/bookmark_filled.svg";
+      bookmark.src = "../../assets/bookmark_filled.svg";
     } else if (source.endsWith("filled.svg")) {
-      bookmark.src = "../assets/bookmark_outline.svg";
+      bookmark.src = "../../assets/bookmark_outline.svg";
     }
   });
 }

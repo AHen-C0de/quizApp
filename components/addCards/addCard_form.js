@@ -1,5 +1,5 @@
-import createNavbar from "./navbar.js";
-import createCard from "./card.js";
+import createNavbar from "../navbar/navbar.js";
+import createCard from "../card/card.js";
 
 /* --- navbar --- */
 createNavbar();
@@ -24,7 +24,6 @@ answerInput.addEventListener("input", () => {
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  console.log("submitted");
 
   const formData = new FormData(event.target);
   const data = Object.fromEntries(formData);
@@ -33,11 +32,13 @@ form.addEventListener("submit", (event) => {
   const answer = data.answer;
   const tag = data.tags;
 
-  createCard(question, answer, [tag], placeholder);
+  const card = createCard(question, answer, [tag]);
+  placeholder.append(card);
 
   form.reset();
-
   questionInput.focus();
+
+  /* success msg */
   successMsg.classList.add("form__submit-success--enter");
   setTimeout(() => {
     successMsg.classList.remove("form__submit-success--enter");
@@ -46,8 +47,6 @@ form.addEventListener("submit", (event) => {
 
 /* --- functions --- */
 function change_charCounter(charInput, charOutput) {
-  console.log("shit");
-
   const char_number = charInput.value.length;
   charOutput.textContent = `${char_number}/150`;
   if (char_number === 150) {

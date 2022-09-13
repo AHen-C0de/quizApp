@@ -4,37 +4,37 @@ export default function createNavbar() {
   const nav_content = [
     {
       file_name: "index.html",
-      href: "./index.html",
+      href: "../index/index.html",
       aria_label: "go to home page",
       icon: {
-        src: "../assets/home.png",
+        src: "../../assets/home.png",
         alt: "home-icon",
       },
     },
     {
       file_name: "bookmarks.html",
-      href: "./bookmarks.html",
+      href: "../bookmarks/bookmarks.html",
       aria_label: "go to bookmarks page",
       icon: {
-        src: "../assets/bookmarks.png",
+        src: "../../assets/bookmarks.png",
         alt: "bookmarks-icon",
       },
     },
     {
       file_name: "addCards.html",
-      href: "./addCards.html",
+      href: "../addCards/addCards.html",
       aria_label: "go to add-cards page",
       icon: {
-        src: "../assets/add.svg",
+        src: "../../assets/add.svg",
         alt: "add-icon",
       },
     },
     {
       file_name: "profile.html",
-      href: "./profile.html",
+      href: "../profile/profile.html",
       aria_label: "go to profile page",
       icon: {
-        src: "../assets/profile.png",
+        src: "../../assets/profile.png",
         alt: "profile-icon",
       },
     },
@@ -71,8 +71,6 @@ export default function createNavbar() {
 function addUnderlineCurrPage(fileName, anchor) {
   const currURL = window.location.href;
   const currFileName = currURL.substring(currURL.lastIndexOf("/") + 1);
-  console.log(currFileName);
-  console.log(fileName);
   if (fileName === currFileName) {
     anchor.classList.add("current");
   }
