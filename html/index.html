@@ -4,14 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles.css" />
-    <script src="../js/darkMode.js" defer></script>
-    <script src="../js/card.js" defer></script>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../js/index.js" type="module" defer></script>
+    <script src="../js/navbar.js" type="module" defer></script>
+    <script src="../js/card.js" type="module" defer></script>
+    <script src="../js/darkMode.js" type="module" defer></script>
     <title>Web-Quiz</title>
   </head>
   <body>
     <header class="header">
-      <h1 class="header__main">Web-Quiz</h1>
+      <h1 class="header__main--homePage">Web-Quiz</h1>
     </header>
 
     <main>
@@ -19,50 +21,6 @@
       <ul class="content-wrapper" js-data="card-list"></ul>
     </main>
 
-    <footer>
-      <nav>
-        <ul class="navbar">
-          <li>
-            <a
-              href="./index.html"
-              aria-label="go to home page"
-              class="grow current"
-            >
-              <img
-                src="../assets/home.png"
-                alt="home-icon"
-                class="navbar__icon"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="./bookmarks.html"
-              aria-label="go to bookmarks page"
-              class="grow"
-            >
-              <img
-                src="../assets/bookmarks.png"
-                alt="bookmarks-icon"
-                class="navbar__icon"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="./profile.html"
-              aria-label="go to profile page"
-              class="grow"
-            >
-              <img
-                src="../assets/profile.png"
-                alt="profile-icon"
-                class="navbar__icon"
-              />
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </footer>
+    <footer></footer>
   </body>
 </html>
