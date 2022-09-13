@@ -1,5 +1,3 @@
-console.log("darkMode.js loaded");
-
 let darkMode;
 let storage = window.sessionStorage;
 

@@ -1,6 +1,8 @@
+import createNavbar from "./navbar.js";
 import createCard from "./card.js";
 
-console.log("addCard_form.js loaded!");
+/* --- navbar --- */
+createNavbar();
 
 /* --- html elements --- */
 const form = document.querySelector('[js-data="form"]');

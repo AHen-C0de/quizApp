@@ -1,5 +1,3 @@
-console.log("card.js loaded!");
-
 export default function createCard(question, answer, tagsArray, container) {
   const card_container = document.createElement("li");
   card_container.classList.add("card");

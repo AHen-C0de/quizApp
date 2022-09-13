@@ -1,7 +1,10 @@
+import createNavbar from "./navbar.js";
 import createCard from "./card.js";
 
-console.log("index.js loaded!");
+/* --- navbar --- */
+createNavbar();
 
+/* --- card list */
 const cardList = document.querySelector('[js-data="card-list"]');
 
 /* - delete - */
