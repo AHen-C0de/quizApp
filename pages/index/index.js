@@ -10,6 +10,7 @@ const cards = loadCards(); // load cards obj from local storage
 const cardList = document.querySelector('[js-data="card-list"]');
 
 cards.forEach((card) => {
-  const cardCreated = createCard(card.question, card.answer, card.tagsList);
+  const cardCreated = createCard(card.question, card.answer, card.tags);
+  console.log(cardCreated);
   cardList.append(cardCreated);
 });

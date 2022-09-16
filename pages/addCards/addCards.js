@@ -1,5 +1,6 @@
-import createNavbar from "../navbar/navbar.js";
-import createCard from "../card/card.js";
+import createNavbar from "../../components/navbar/navbar.js";
+import createCard from "../../components/card/card.js";
+import { loadCards, saveCards } from "../../utilities/localstorage.js";
 
 /* --- navbar --- */
 createNavbar();
@@ -14,7 +15,7 @@ const successMsg = document.querySelector('[js-data="submit-sucess"]');
 
 const placeholder = document.querySelector('[js-data="placeholder"]');
 
-/* --- event listener --- */
+/* --- charCounter --- */
 questionInput.addEventListener("input", () => {
   change_charCounter(questionInput, charsQuest);
 });
@@ -22,18 +23,25 @@ answerInput.addEventListener("input", () => {
   change_charCounter(answerInput, charsAnswer);
 });
 
+/* --- form --- */
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const formData = new FormData(event.target);
   const data = Object.fromEntries(formData);
 
-  const question = data.question;
-  const answer = data.answer;
-  const tag = data.tags;
+  console.log(data.tags);
+  const newCard = {
+    id: Math.random() + "",
+    question: data.question,
+    answer: data.answer,
+    tags: [data.tags],
+    bookmarked: false,
+  };
 
-  const card = createCard(question, answer, [tag]);
-  placeholder.append(card);
+  const cards = loadCards();
+  cards.push(newCard);
+  saveCards(cards);
 
   form.reset();
   questionInput.focus();
