@@ -2,12 +2,13 @@ export default function createCard(question, answer, tagsArray) {
   const card = document.createElement("li");
   card.classList.add("card");
 
-  const bookmark = document.createElement("input");
-  bookmark.src = "../../assets/bookmark_outline.svg";
-  bookmark.type = "image";
-  bookmark.alt = "bookmark-icon";
+  const svg_bookmark_inactive = `<svg js-data="bookmark-ic" class="bookmark-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z"/></svg>`;
+  const svg_bookmark_active = `<svg js-data="bookmark-ac" class="bookmark-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>`;
+
+  const bookmark = document.createElement("button");
+  bookmark.innerHTML = svg_bookmark_inactive;
   bookmark.classList.add("card__bookmark-icon");
-  bookmark_fun(bookmark); // add event listener
+  bookmark_fun(bookmark, svg_bookmark_inactive, svg_bookmark_active); // add event listener
 
   const questionBox = document.createElement("p");
   questionBox.textContent = question;
@@ -38,14 +39,15 @@ export default function createCard(question, answer, tagsArray) {
   return card;
 }
 
-function bookmark_fun(bookmark) {
+function bookmark_fun(bookmark, icon_inactive, icon_active) {
   bookmark.addEventListener("click", () => {
-    const source = bookmark.src;
+    const svg = bookmark.querySelector("svg");
+    const state = svg.getAttribute("js-data");
 
-    if (source.endsWith("outline.svg")) {
-      bookmark.src = "../../assets/bookmark_filled.svg";
-    } else if (source.endsWith("filled.svg")) {
-      bookmark.src = "../../assets/bookmark_outline.svg";
+    if (state === "bookmark-ic") {
+      bookmark.innerHTML = icon_active;
+    } else if (state === "bookmark-ac") {
+      bookmark.innerHTML = icon_inactive;
     }
   });
 }
